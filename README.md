@@ -1,3 +1,7 @@
+# Express Video Stream
+Express video stream is a middleware used to stream videos to the browser, and its super easy to implement.
+#### Install
+`npm install express-video-stream`
 #### Usage
 Import the module
 ```javascript
