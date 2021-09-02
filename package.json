@@ -2,9 +2,9 @@
   "name": "express-video-stream",
   "version": "1.0.0",
   "description": "An express package used to easily render video files on the web",
-  "main": "index.js",
+  "main": "middleware.js",
   "scripts": {
-    "start": "SET NODE_ENV=dev && node test/rsc/server.js",
+    "start": "SET NODE_ENV=dev && node sample/server.js",
     "test": "mocha"
   },
   "repository": {

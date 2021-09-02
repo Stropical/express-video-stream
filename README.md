@@ -14,16 +14,17 @@ The first step is importing it.
 const evs = require('express-video-stream') // Express Video Stream
 ```
 
-Once you have created your express app, this package needs 3 lines to work. The first line sets the config. The config is where you set your video ID and path behind it. This is so you can ask the server for a video without needing the path to the file. The config should contain an array named files with objects that have an id and path. You can also use the addVideo function, which takes the id then the path.
+Once you have created your express app, this package needs 2 lines to work. The first line sets the config. The config is where you set your video ID and path behind it. This is so you can ask the server for a video without needing the path to the file. The config should contain an array named files with objects that have an id and path. You can also use the addVideo function, which takes the id then the path.
 ```javascript
 evs.setConfig(JSON.parse(fs.readFileSync('./sample/config.json'))); //Load config from file
+// or
 evs.addVideo("Demo3", "./sample/vids/test3.mp4")    //Add video to config
 ```
 The last one takes the EVS object you’ve created and sets it as middleware for express.
 ```javascript
 app.use(evs.middleware) //Use streaming middleware
 ```
-Once your backend is set up its time to look at front end. All you need is a video tag with a source tag inside. The source’s src tag should be ‘/vidChunk?id=<put your id here>’. The server will return a 404 if the video’s ID cannot be found.
+Once your backend is set up its time to look at front end. All you need is a video tag with a source tag inside. The source’s src tag should be ‘/vidChunk?id={put your id here}. The server will return a 404 if the video’s ID cannot be found.
 ```html
 <video id="videoPlayer" width="600" controls muted="muted" autoplay>
   <source src="/vidChunk?id=test3" type="video/mp4" />

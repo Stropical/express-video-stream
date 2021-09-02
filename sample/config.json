@@ -1,0 +1,12 @@
+{
+    "files": [
+        {
+            "id": "Demo1",
+            "path": "./sample/vids/test1.mp4"
+        },
+        {
+            "id": "Demo2",
+            "path": "./sample/vids/test2.mp4"
+        }
+    ]
+}
