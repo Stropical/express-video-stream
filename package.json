@@ -14,7 +14,8 @@
   "keywords": [
     "video",
     "stream",
-    "express"
+    "express",
+    "middleware"
   ],
   "author": "Ethan Marreel",
   "license": "ISC",
@@ -28,5 +29,7 @@
     "eslint": "^7.32.0",
     "mocha": "^2.5.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
