@@ -1,6 +1,9 @@
 const express = require('express')
 const fs = require('fs')
-const evs = require('../index') // Express Video Stream
+const path = require('path')
+const evs = require('../../index.js') // Express Video Stream
+
+var app = express();
 
 evs.setConfig({  //Initialize stream backend with config
     "files": [
@@ -21,14 +24,17 @@ evs.setConfig({  //Initialize stream backend with config
 
 evs.updateFileSizes();  // Gets the size of each file once config is set
 
-var app = express();
+
 app.use(evs.middleware) //Use streaming middleware
 
 app.get('/', (req, res) => {
-    var page = fs.readFileSync('C:/Users/ethan/Documents/GitHub/express-video-stream/test/index.html') // Load html into buffer
+    var page = fs.readFileSync(path.join(__dirname, './index.html')) // Load html into buffer
     res.send(page + ' ');
 })
 
 app.listen(8080, () => {
     console.log("Test is up and running on localhost:8080")
 })
+
+
+npm install express-video-stream
