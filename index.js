@@ -1,4 +1,5 @@
 const fs = require('fs')
+const path = require('path')
 
 var config = {}
 
@@ -45,7 +46,7 @@ function middleware(req, res, next) {
                     };
 
                     res.writeHead(206, headers);    //Write headers then pipe video data to response
-                    var vs = fs.createReadStream(entry.path, {start, end})
+                    var vs = fs.createReadStream(path.resolve(entry.path), {start, end})
                     vs.pipe(res);
                     next();
                 }

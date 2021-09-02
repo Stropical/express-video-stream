@@ -8,22 +8,21 @@ var app = express();
 evs.setConfig({  //Initialize stream backend with config
     "files": [
         {
-            "id": "test",
-            "path": "C:/Users/ethan/Videos/Geometry Dash/Geometry Dash 2021.08.03 - 15.46.53.02.DVR.mp4"
+            "id": "test1",
+            "path": "./test/rsc/vids/test1.mp4"
         },
         {
             "id": "test2",
-            "path": "C:/Users/ethan/Videos/Geometry Dash/Geometry Dash 2021.07.06 - 13.25.11.02.DVR.mp4"
+            "path": "./test/rsc/vids/test2.mp4"
         },
         {
             "id": "test3",
-            "path": "C:/Users/ethan/Videos/Geometry Dash/Geometry Dash 2021.07.05 - 15.54.31.09.DVR.mp4"
+            "path": "./test/rsc/vids/test3.mp4"
         }
     ]
 })
 
 evs.updateFileSizes();  // Gets the size of each file once config is set
-
 
 app.use(evs.middleware) //Use streaming middleware
 
@@ -35,6 +34,3 @@ app.get('/', (req, res) => {
 app.listen(8080, () => {
     console.log("Test is up and running on localhost:8080")
 })
-
-
-npm install express-video-stream
