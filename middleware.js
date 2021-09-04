@@ -7,6 +7,10 @@ function setConfig(_config) {
     config = _config;
 }
 
+function setBitRate(bitRate) {
+    config.bitRate = bitRate;
+}
+
 function updateFileSizes() { // Searches for each file path and gets the size and saves it in object
     config.files.forEach((file, index) => {
         try { // Just to make sure file not found is caught
@@ -44,7 +48,7 @@ function middleware(req, res, next) {
                 if (entry.id == req.query.id && entry.size) { // ID has been found and size is defined
                     found = true;
                     updateFileSizes();
-                    
+
                     const CHUNK_SIZE = 10 ** 6; // Parse Range
                     const start = Number(range.replace(/\D/g, ""));
                     const end = Math.min(start + CHUNK_SIZE, entry.size - 1);
@@ -83,5 +87,6 @@ function middleware(req, res, next) {
 module.exports = {
     middleware,
     setConfig,
-    addVideo
+    addVideo,
+    setBitRate
 }

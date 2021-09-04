@@ -1,7 +1,7 @@
 const express = require('express')
 const fs = require('fs')
 const path = require('path')
-const evs = require('../middleware.js') // Express Video Stream
+const evs = require('express-video-stream') // Express Video Stream
 
 var app = express();
 
