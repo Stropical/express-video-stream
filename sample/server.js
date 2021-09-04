@@ -5,8 +5,8 @@ const evs = require('express-video-stream') // Express Video Stream
 
 var app = express();
 
-evs.setConfig(JSON.parse(fs.readFileSync('./sample/config.json'))); //Load config from file
-evs.addVideo("Demo3", "./sample/vids/test3.mp4")    //Add video to config
+evs.setConfig(JSON.parse(fs.readFileSync('./config.json'))); //Load config from file
+evs.addVideo("Demo3", "./vids/test3.mp4")    //Add video to config
 
 app.use(evs.middleware) //Use streaming middleware
 

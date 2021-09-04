@@ -1,6 +1,6 @@
 {
   "name": "express-video-stream",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "An express package used to easily render video files on the web",
   "main": "middleware.js",
   "scripts": {

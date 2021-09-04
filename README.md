@@ -3,7 +3,7 @@
 Express video stream is an easy to implement package that allows you to stream videos on the server to an HTML5 video tag.
 
 ## How to Install
-Run this command to install in your project.
+Run this command to install in your project. Warning: Pulling from NPM does NOT include demo videos or sample to keep project size down, go to github to find demo videos and samples.
 ```
 npm install express-video-stream
 ```
