@@ -1,5 +1,5 @@
 # Express Video Stream
-https://app.travis-ci.com/Stropical/express-video-stream.svg?branch=main
+![alt text for screen readers](https://app.travis-ci.com/Stropical/express-video-stream.svg?branch=main)
 ## About
 Express video stream is an easy to implement package that allows you to stream videos on the server to an HTML5 video tag.
 
