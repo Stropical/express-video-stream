@@ -5,7 +5,7 @@
   "main": "middleware.js",
   "scripts": {
     "start": "SET NODE_ENV=dev && node test/server.js",
-    "test": "jest test/unit"
+    "test": "jest test/unit test/integration"
   },
   "repository": {
     "type": "git",
@@ -28,9 +28,11 @@
     "chai-http": "^2.0.1",
     "eslint": "^7.32.0",
     "jest": "^27.1.1",
-    "mocha": "^2.5.3"
+    "mocha": "^2.5.3",
+    "supertest": "^6.1.6"
   },
   "dependencies": {
+    "colors": "^1.4.0",
     "express": "^4.17.1"
   }
 }

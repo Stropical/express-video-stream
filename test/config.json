@@ -1,13 +1,12 @@
 {
-    "bitRateControl": true,
     "files": [
         {
             "id": "Demo1",
-            "path": "./test/vids/test1.mp4"
+            "path": "./sample/vids/test1.mp4"
         },
         {
             "id": "Demo2",
-            "path": "./test/vids/test2.mp4"
+            "path": "./sample/vids/test2.mp4"
         }
     ]
 }

@@ -1,13 +1,11 @@
-## Unit Testing
-
-✔️
+## Testing
 
 Get and Set Config
     - Bad data Testing ✔️
     - Empty config testing ✔️
     - Empty data ✔️
-    - Adds correct config
-    - Gets correct config
+    - Adds correct config ✔️
+    - Gets correct config ✔️
 
 Add Video function:
     - Test for bad/empty config ✔️
@@ -35,11 +33,11 @@ BitRateManager:
         - Test if total frames = 0 || 1 ✔️
         - Test if tracking frames are not numbers
         - Test for bad / empty cid ✔️
-        - Test for bad filesize var
-        - Test bitrate with hardcoded tracking data
-        - Test if total time = 0 (divide by 0 err)
-        - Make sure currentBitRate is a number 
-    AllowClient
+        - Test for bad filesize var ✔️
+        - Test bitrate with hardcoded tracking data ✔️
+        - Test if total time = 0 (divide by 0 err) ✔️
+        - Make sure currentBitRate is a number ✔️
+    AllowClient 
         - Check hard coded data
         - Bad / Empty CID
 
@@ -50,9 +48,9 @@ Middleware:
     - GetIDS Path:
         - Test for no files / bad object id
         - Test if no data returns empty array
-        - Test for 200
+        - Test for 200 ✔️
     - VidChunk path
-        - Test for undefined id or Range
+        - Test for undefined id or Range ✔️
 
 update file size
     - Test bad file names / sizes
@@ -60,12 +58,3 @@ update file size
     - Missing files
     - gets correct size
     - error if can't find file
-
-addVideo
- - adds correct config
-
-
-## Integration Testing
-
-Test IDs command
-Test VideoChunk Command

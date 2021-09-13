@@ -23,7 +23,6 @@ function middleware(req, res, next) { // Check if client exists in client array
     } else { // Found Client
         BitRateManager.clientTrackFrame(cid);
         allow = BitRateManager.allowClient(cid);
-        console.log("Client is allowed?: " + allow)
     }
 
     //TODO: Breakout req.path into switch and code under each into functions
