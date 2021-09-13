@@ -1,6 +1,6 @@
 process.env.PORT = 8081;
 
-const app = require('../server');
+const { app, server } = require('../server');
 const supertest = require('supertest');
 
 test('GET /vidChunk without ID', async () => {
@@ -28,4 +28,5 @@ test('GET /vidChunk without range', async () => {
         })
 });
 
+server.close();
 //Can't test 409 just yet

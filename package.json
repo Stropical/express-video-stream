@@ -5,7 +5,7 @@
   "main": "middleware.js",
   "scripts": {
     "start": "SET NODE_ENV=dev && node test/server.js",
-    "test": "jest test/unit test/integration"
+    "test": "jest test/unit test/integration --detectOpenHandles"
   },
   "repository": {
     "type": "git",

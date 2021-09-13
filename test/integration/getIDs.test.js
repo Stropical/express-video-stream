@@ -1,4 +1,4 @@
-const app = require('../server');
+const { app, server } = require('../server');
 const supertest = require('supertest');
 
 test('GET /getIDs', async () => {
@@ -8,3 +8,5 @@ test('GET /getIDs', async () => {
             expect(JSON.stringify(response.body)).toBe(JSON.stringify(["Demo1", "Demo2", "Demo3"]));
         })
 });
+
+server.close();
