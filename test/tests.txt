@@ -1,0 +1,71 @@
+## Unit Testing
+
+✔️
+
+Get and Set Config
+    - Bad data Testing ✔️
+    - Empty config testing ✔️
+    - Empty data ✔️
+    - Adds correct config
+    - Gets correct config
+
+Add Video function:
+    - Test for bad/empty config ✔️
+    - Test for bad/empty input params ✔️
+    - Check if video is added ✔️
+
+BitRateManager:
+    - Constructor uses default bitrate if not specified  ✔️
+    - Constructor uses bitrate if specified ✔️
+    - Constructor returns valid class ✔️
+    - Create client:
+        - Test for bad ip, blank ip, and good ip ✔️
+        - Make sure tracking array is empty ✔️
+        - Returns good client ID ✔️
+    - Client track frame
+        - Test for shifting last frame if count is > TRACKING_FRAMES ✔️
+        - Test for bad cid / empty cid ✔️
+        - Test for empty push and push with some frames ✔️
+    - Find Client Data
+        - Test hard coded ip to cid ✔️
+        - Test bad / blank ip ✔️
+        - Test for not found ✔️
+        - Test for empty client array ✔️
+    - GetBitRate
+        - Test if total frames = 0 || 1 ✔️
+        - Test if tracking frames are not numbers
+        - Test for bad / empty cid ✔️
+        - Test for bad filesize var
+        - Test bitrate with hardcoded tracking data
+        - Test if total time = 0 (divide by 0 err)
+        - Make sure currentBitRate is a number 
+    AllowClient
+        - Check hard coded data
+        - Bad / Empty CID
+
+
+Middleware:
+    - Bad request object (ip, ) // Add bad request check
+    - Test true/false for AllowClient (unit and Integration)
+    - GetIDS Path:
+        - Test for no files / bad object id
+        - Test if no data returns empty array
+        - Test for 200
+    - VidChunk path
+        - Test for undefined id or Range
+
+update file size
+    - Test bad file names / sizes
+    - Testing for bad configs
+    - Missing files
+    - gets correct size
+    - error if can't find file
+
+addVideo
+ - adds correct config
+
+
+## Integration Testing
+
+Test IDs command
+Test VideoChunk Command
